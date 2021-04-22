@@ -1,0 +1,2 @@
+Note that a lot of these algorithms might not actually be correct, so when coding more
+algorithms code them in the algorithms 2 package and not here.
