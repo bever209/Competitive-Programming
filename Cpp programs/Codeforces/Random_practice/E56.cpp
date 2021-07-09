@@ -10,7 +10,7 @@ using namespace std;
 using ll = long long;
 
 const int N = 2e5 + 5; // limit for array size
-int n;                 // array size
+const int n;                 // array size
 ll tree[4 * N + 5];
 ll arr[N];
 int mx = 2e9;

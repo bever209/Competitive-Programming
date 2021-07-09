@@ -10,7 +10,7 @@ using namespace std;
 using ll = long long;
 using pii = pair<int,int>;
 
-int n,k;
+const int n,k;
 vector<vector<int>> arr;
 vector<vector<int>> dp;
 

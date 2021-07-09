@@ -13,7 +13,7 @@ using vi = vector<int>;
 vector<string> grid;
 int num_g=0;
 vector<vector<bool>> vis;
-int n,m;
+const int n,m;
 void dfs(int r, int c){
     vis[r][c]=true;
     if (grid[r].at(c)=='G'){
