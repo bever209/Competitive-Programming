@@ -11,22 +11,43 @@ using ll = long long;
 using pii = pair<int,int>;
 using vi = vector<int>;
 
+// Should be good, but may not be
+// If not good, just copy and paste from the usaco.guide DSU section
+
 struct DSU {
-    vector<int> e;
-    DSU(int N) { e = vi (N, -1); }
+    vi v;
+    void init(int a){
+        v=vi(a,-1);
+    }
 
-    // get representive component (uses path compression)
-    int get(int x) { return e[x] < 0 ? x : e[x] = get(e[x]); }
+    int get(int x) {
+        if (v[x] < 0) {
+            return x;
+        } else {
+            v[x] = get(v[x]);
+            return v[x];
+        }
+    }
 
-    bool same_set(int a, int b) { return get(a) == get(b); }
+    bool same_set(int x, int y) {
+        return get(x) == get(y);
+    }
 
-    int size(int x) { return -e[get(x)]; }
+    int size(int x) {
+        return -v[get(x)];
+    }
 
-    bool unite(int x, int y) {  // union by size
-        x = get(x), y = get(y);
-        if (x == y) return false;
-        if (e[x] > e[y]) swap(x, y);
-        e[x] += e[y]; e[y] = x;
+    bool unite(int x, int y) {
+        x = get(x);
+        y = get(y);
+        if (x == y) {
+            return false;
+        }
+        if (v[x] >= v[y]) {
+            swap(x, y);
+        }
+        v[x]=v[x]+ v[y];
+        v[y] = x;
         return true;
     }
 };

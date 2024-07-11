@@ -9,25 +9,20 @@
 using namespace std;
 using ll = long long;
 using pii = pair<int, int>;
-using pll=pair<ll,ll>;
 using vi = vector<int>;
-using vivi=vector<vi>;
-using vb=vector<bool>;
-using vll=vector<ll>;
-using vpii=vector<pii>;
 using str = string;
 
-const ll inf = 2 * 1e18;
 
-int main() {
+vi kmp(str a){
+    vi x(a.size());
+    for (int i=1;i<a.size();++i){
+        int j=x[i-1];
+        while (j>0 && a[j]!=a[i]) j=x[j-1];
 
+        if (a[i]==a[j]) ++j;
+        x[i]=j;
 
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-
-    
-
-
-    return 0;
+    }
+    return x;
 }
 

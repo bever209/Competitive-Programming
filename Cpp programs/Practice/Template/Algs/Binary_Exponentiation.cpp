@@ -9,25 +9,23 @@
 using namespace std;
 using ll = long long;
 using pii = pair<int, int>;
-using pll=pair<ll,ll>;
 using vi = vector<int>;
-using vivi=vector<vi>;
-using vb=vector<bool>;
-using vll=vector<ll>;
-using vpii=vector<pii>;
 using str = string;
 
 const ll inf = 2 * 1e18;
 
-int main() {
 
 
-    ios::sync_with_stdio(false);
-    cin.tie(0);
 
-    
-
-
-    return 0;
+const ll mod=998244353; // subject to change
+ll binpow(ll a, ll b){
+    ll res = 1;
+    while (b){
+        if (b & 1)
+            res = (res*a) % mod;
+        a = (a*a)%mod;
+        b >>= 1;
+    }
+    return res;
 }
 

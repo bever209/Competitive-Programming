@@ -8,21 +8,24 @@
 
 using namespace std;
 using ll = long long;
-using pii = pair<int,int>;
+using pii = pair<int, int>;
+using pll=pair<ll,ll>;
 using vi = vector<int>;
-using str=string;
+using vivi=vector<vi>;
+using vb=vector<bool>;
+using vll=vector<ll>;
+using vpii=vector<pii>;
+using str = string;
 
-const ll inf=2*1e18;
+const ll inf = 2 * 1e18;
 
-int main()
-{
+int main() {
 
 
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-    freopen("file.in","r",stdin);
-    freopen("file.out","w",stdout);
+
 
 
     return 0;

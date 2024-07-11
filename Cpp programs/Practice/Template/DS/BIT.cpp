@@ -26,9 +26,3 @@ ll query(int l, int r)
     return query(r) - query(l - 1);
 }
 
-void set(int ind, int v)
-{
-    add(ind, -arr[ind]);
-    arr[ind] = v;
-    add(ind, arr[ind]);
-}
